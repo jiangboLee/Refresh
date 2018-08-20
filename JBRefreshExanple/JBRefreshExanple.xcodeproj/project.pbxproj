@@ -14,6 +14,7 @@
 		9B403A09212819320092943B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B403A07212819320092943B /* LaunchScreen.storyboard */; };
 		9B403A14212819320092943B /* JBRefreshExanpleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B403A13212819320092943B /* JBRefreshExanpleTests.swift */; };
 		9B403A1F212819320092943B /* JBRefreshExanpleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B403A1E212819320092943B /* JBRefreshExanpleUITests.swift */; };
+		9B403A3321281E160092943B /* JBRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B403A3221281E160092943B /* JBRefreshComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9B403A1A212819320092943B /* JBRefreshExanpleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JBRefreshExanpleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B403A1E212819320092943B /* JBRefreshExanpleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshExanpleUITests.swift; sourceTree = "<group>"; };
 		9B403A20212819320092943B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B403A3221281E160092943B /* JBRefreshComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +131,26 @@
 		9B403A2C212819440092943B /* JBRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				9B403A3021281D920092943B /* Custom */,
+				9B403A2F21281D840092943B /* Base */,
 			);
 			name = JBRefresh;
 			path = ../../JBRefresh;
+			sourceTree = "<group>";
+		};
+		9B403A2F21281D840092943B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9B403A3221281E160092943B /* JBRefreshComponent.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9B403A3021281D920092943B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B403A3321281E160092943B /* JBRefreshComponent.swift in Sources */,
 				9B403A01212819310092943B /* ViewController.swift in Sources */,
 				9B4039FF212819310092943B /* AppDelegate.swift in Sources */,
 			);
