@@ -20,12 +20,67 @@ class JBRefreshHeader: JBRefreshComponent {
     ///这个key用来存储上一次下拉刷新成功的时间
     var lastUpdatedTimeKey: String?
     ///上一次下拉刷新成功的时间
-    private(set) var lastUpdatedTime: Date?
+    var lastUpdatedTime: Date? {
+        return UserDefaults.standard.object(forKey: lastUpdatedTimeKey ?? "") as? Date
+    }
     
     ///忽略多少scrollView的contentInset的top
-    var ignoredScrollViewContentInsetTop: CGFloat = 0
+    var ignoredScrollViewContentInsetTop: CGFloat = 0 {
+        didSet {
+            self.y = -self.height - ignoredScrollViewContentInsetTop
+        }
+    }
     
     private var insetTDelta: CGFloat?
+    
+    override var state: JBRefreshState {
+        set(newState) {
+            // 状态检查
+            let oldState = self.state
+            if oldState == newState {
+                return
+            }
+            super.state = newState
+            
+            // 根据状态做事情
+            if newState == .Idle {
+                if oldState != .Refreshing {return}
+                 // 保存刷新时间
+                UserDefaults.standard.set(Date(), forKey: lastUpdatedTimeKey ?? JBRefreshHead.lastUpdateTimeKey)
+                UserDefaults.standard.synchronize()
+                
+                // 恢复inset和offset
+                UIView.animate(withDuration: JBRefreshConst.slowAnimationDuration, animations: {
+                    self.scrollView?.insetTop += self.insetTDelta ?? 0
+                    // 自动调整透明度
+                    if self.automaticallyChangeAlpha ?? false {
+                        self.alpha = 0.0
+                    }
+                }) { (finished) in
+                    self.pullingPercent = 0.0
+                    self.endRefreshingCompletionBlock?()
+                }
+            } else if newState == .Refreshing {
+                DispatchQueue.main.async { [weak self] in
+                    guard let `self` = self, let scrollViewOriginalInset = self.scrollViewOriginalInset, let scrollView = self.scrollView else {return}
+                    UIView.animate(withDuration: JBRefreshConst.fastAnimationDuration, animations: {
+                        let top = scrollViewOriginalInset.top + self.height
+                        // 增加滚动区域top
+                        scrollView.insetTop = top
+                        // 设置滚动位置
+                        var offset = scrollView.contentOffset
+                        offset.y = -top
+                        scrollView.setContentOffset(offset, animated: false)
+                    }, completion: { (finished) in
+                        self.executeRefreshingCallback()
+                    })
+                }
+            }
+        }
+        get {
+            return super.state
+        }
+    }
 }
 
 //MARK: - 覆盖父类的方法
@@ -76,8 +131,17 @@ extension JBRefreshHeader {
         if scrollView.isDragging {
             self.pullingPercent = pullingPercent
             if self.state == .Idle && offsetY < normal2pullingOffsetY {
-                
+                // 转为即将刷新状态
+                self.state = .Pulling
+            } else if self.state == .Pulling && offsetY >= normal2pullingOffsetY {
+                // 转为普通状态
+                self.state = .Idle
             }
+        } else if self.state == .Pulling { // 即将刷新 && 手松开
+            //开始刷新
+            self.beginRefreshing()
+        } else if pullingPercent < 1 {
+            self.pullingPercent = pullingPercent
         }
     }
 }
