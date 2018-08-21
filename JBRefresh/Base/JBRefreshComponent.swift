@@ -15,8 +15,8 @@ import UIKit
 /// - Refreshing: 正在刷新中的状态
 /// - WillRefresh:  即将刷新的状态
 /// - NoMoreData: 所有数据加载完毕，没有更多的数据了
-enum JBRefreshState {
-    case Idle
+enum JBRefreshState: Int {
+    case Idle = 1
     case Pulling
     case Refreshing
     case WillRefresh
@@ -73,7 +73,7 @@ class JBRefreshComponent: UIView {
     }
     ///根据拖拽比例自动切换透明度
     var automaticallyChangeAlpha: Bool? {
-        set(_automaticallyChangeAlpha) {
+        willSet(_automaticallyChangeAlpha) {
             self.automaticallyChangeAlpha = _automaticallyChangeAlpha
             if self.refreshing {
                 return
@@ -83,9 +83,6 @@ class JBRefreshComponent: UIView {
             } else {
                 self.alpha = 1.0
             }
-        }
-        get {
-            return self.automaticallyChangeAlpha
         }
     }
     
@@ -112,7 +109,7 @@ class JBRefreshComponent: UIView {
         super.willMove(toSuperview: newSuperview)
         //如果不是UIScrollView，不做任何事情
         guard let newSuperview = newSuperview,
-        !newSuperview.isKind(of: UIScrollView.self)
+        newSuperview.isKind(of: UIScrollView.self)
         else { return }
         // 旧的父控件移除监听
         removeObservers()

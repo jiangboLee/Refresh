@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B16BF29212C10DB008AEA54 /* UIScrollViewRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16BF28212C10DB008AEA54 /* UIScrollViewRefresh.swift */; };
 		9B4039FF212819310092943B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4039FE212819310092943B /* AppDelegate.swift */; };
 		9B403A01212819310092943B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B403A00212819310092943B /* ViewController.swift */; };
 		9B403A04212819310092943B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B403A02212819310092943B /* Main.storyboard */; };
@@ -19,6 +20,10 @@
 		9BAEBAF2212AA0C900D7F5C9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEBAF1212AA0C900D7F5C9 /* UIViewExtension.swift */; };
 		9BAEBAF4212AA78900D7F5C9 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEBAF3212AA78900D7F5C9 /* UIScrollViewExtension.swift */; };
 		9BAEBAF6212AEAC300D7F5C9 /* JBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEBAF5212AEAC300D7F5C9 /* JBRefreshHeader.swift */; };
+		9BAEBAFA212BB09A00D7F5C9 /* JBRefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEBAF9212BB09A00D7F5C9 /* JBRefreshStateHeader.swift */; };
+		9BAEBAFC212BB27B00D7F5C9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEBAFB212BB27B00D7F5C9 /* UILabelExtension.swift */; };
+		9BAEBAFE212BBE2A00D7F5C9 /* NSBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAEBAFD212BBE2A00D7F5C9 /* NSBundleExtension.swift */; };
+		9BAEBB06212BC6B000D7F5C9 /* JBRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BAEBB05212BC6AF00D7F5C9 /* JBRefresh.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B16BF28212C10DB008AEA54 /* UIScrollViewRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewRefresh.swift; sourceTree = "<group>"; };
 		9B4039FB212819310092943B /* JBRefreshExanple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBRefreshExanple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4039FE212819310092943B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B403A00212819310092943B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,10 @@
 		9BAEBAF1212AA0C900D7F5C9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9BAEBAF3212AA78900D7F5C9 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		9BAEBAF5212AEAC300D7F5C9 /* JBRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshHeader.swift; sourceTree = "<group>"; };
+		9BAEBAF9212BB09A00D7F5C9 /* JBRefreshStateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshStateHeader.swift; sourceTree = "<group>"; };
+		9BAEBAFB212BB27B00D7F5C9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		9BAEBAFD212BBE2A00D7F5C9 /* NSBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSBundleExtension.swift; sourceTree = "<group>"; };
+		9BAEBB05212BC6AF00D7F5C9 /* JBRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JBRefresh.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +149,15 @@
 		9B403A2C212819440092943B /* JBRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				9BAEBB05212BC6AF00D7F5C9 /* JBRefresh.bundle */,
+				9BAEBAF7212BB05600D7F5C9 /* Custom */,
 				9B403A2F21281D840092943B /* Base */,
 				9BAEBAEF212A67ED00D7F5C9 /* JBRefreshConst.swift */,
 				9BAEBAF1212AA0C900D7F5C9 /* UIViewExtension.swift */,
 				9BAEBAF3212AA78900D7F5C9 /* UIScrollViewExtension.swift */,
+				9B16BF28212C10DB008AEA54 /* UIScrollViewRefresh.swift */,
+				9BAEBAFB212BB27B00D7F5C9 /* UILabelExtension.swift */,
+				9BAEBAFD212BBE2A00D7F5C9 /* NSBundleExtension.swift */,
 			);
 			name = JBRefresh;
 			path = ../../JBRefresh;
@@ -155,6 +170,22 @@
 				9BAEBAF5212AEAC300D7F5C9 /* JBRefreshHeader.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9BAEBAF7212BB05600D7F5C9 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9BAEBAF8212BB06D00D7F5C9 /* Header */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9BAEBAF8212BB06D00D7F5C9 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				9BAEBAF9212BB09A00D7F5C9 /* JBRefreshStateHeader.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +296,7 @@
 				9B403A09212819320092943B /* LaunchScreen.storyboard in Resources */,
 				9B403A06212819320092943B /* Assets.xcassets in Resources */,
 				9B403A04212819310092943B /* Main.storyboard in Resources */,
+				9BAEBB06212BC6B000D7F5C9 /* JBRefresh.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +323,14 @@
 			files = (
 				9BAEBAF2212AA0C900D7F5C9 /* UIViewExtension.swift in Sources */,
 				9BAEBAF6212AEAC300D7F5C9 /* JBRefreshHeader.swift in Sources */,
+				9BAEBAFA212BB09A00D7F5C9 /* JBRefreshStateHeader.swift in Sources */,
 				9B403A3321281E160092943B /* JBRefreshComponent.swift in Sources */,
+				9B16BF29212C10DB008AEA54 /* UIScrollViewRefresh.swift in Sources */,
 				9BAEBAF0212A67ED00D7F5C9 /* JBRefreshConst.swift in Sources */,
 				9B403A01212819310092943B /* ViewController.swift in Sources */,
 				9B4039FF212819310092943B /* AppDelegate.swift in Sources */,
+				9BAEBAFC212BB27B00D7F5C9 /* UILabelExtension.swift in Sources */,
+				9BAEBAFE212BBE2A00D7F5C9 /* NSBundleExtension.swift in Sources */,
 				9BAEBAF4212AA78900D7F5C9 /* UIScrollViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

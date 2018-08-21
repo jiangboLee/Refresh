@@ -22,8 +22,15 @@ struct JBRefreshKeyPath {
     static let panState = "state"
 }
 struct JBRefreshHead {
-    static let lastUpdateTimeKey = "JBRefreshHeadLastUpdateTimeKey"
-    static let idleText = "JBRefreshHeadIdleText"
-    static let pullingText = "JBRefreshHeadPullingText"
-    static let refreshingText = "JBRefreshHeadRefreshingText"
+    static let lastUpdateTimeKey = "JBRefreshHeaderLastUpdateTimeKey"
+    static let idleText = "JBRefreshHeaderIdleText"
+    static let pullingText = "JBRefreshHeaderPullingText"
+    static let refreshingText = "JBRefreshHeaderRefreshingText"
+    
+    static let lastTimeText = "JBRefreshHeaderLastTimeText"
+    static let dateTodayText = "JBRefreshHeaderDateTodayText"
+    static let noneLastDateText = "JBRefreshHeaderNoneLastDateText"
 }
+
+let JBRefreshLabelFont = UIFont.boldSystemFont(ofSize: 14)
+let JBRefreshLabelTextColor = UIColor(red: 90.0 / 255.0, green: 90.0 / 255.0, blue: 90.0 / 255.0, alpha: 1.0)
