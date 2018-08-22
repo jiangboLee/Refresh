@@ -29,12 +29,6 @@ class JBRefreshStateHeader: JBRefreshHeader {
         addSubview(label)
         return label
     }()
-    /// 设置state状态下的文字
-    func setTitle(_ title: String?, _ state: JBRefreshState) {
-        guard let title = title else { return }
-        stateTitles[state.hashValue] = title
-        stateLabel.text = stateTitles[state.hashValue] as? String
-    }
     
     ///所有状态对应的文字
     lazy var stateTitles: Dictionary = [:]
@@ -101,6 +95,13 @@ class JBRefreshStateHeader: JBRefreshHeader {
         get {
             return super.state
         }
+    }
+    
+    /// 设置state状态下的文字
+    func setTitle(_ title: String?, _ state: JBRefreshState) {
+        guard let title = title else { return }
+        stateTitles[state.hashValue] = title
+        stateLabel.text = stateTitles[state.hashValue] as? String
     }
 }
 

@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
     var count = 1
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.header = JBRefreshStateHeader.headerWithRefreshingBlock({
+        tableView.header = JBRefreshNormalHeader.headerWithRefreshingBlock({
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
                 self.count += 1
                 self.tableView.reloadData()
