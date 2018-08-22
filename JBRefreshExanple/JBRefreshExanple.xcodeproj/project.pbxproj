@@ -12,6 +12,9 @@
 		9B3EF69C212D13660011D058 /* JBRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF69B212D13660011D058 /* JBRefreshGifHeader.swift */; };
 		9B3EF69E212D3A6C0011D058 /* JBTableViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF69D212D3A6C0011D058 /* JBTableViewControllerDemo.swift */; };
 		9B3EF6A1212D406E0011D058 /* JBChiBaoZiHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF6A0212D406E0011D058 /* JBChiBaoZiHeader.swift */; };
+		9B3EF6A3212D4B160011D058 /* JBRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF6A2212D4B160011D058 /* JBRefreshFooter.swift */; };
+		9B3EF6A5212D4E1B0011D058 /* JBRefreshAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF6A4212D4E1B0011D058 /* JBRefreshAutoFooter.swift */; };
+		9B3EF6A9212D5C6E0011D058 /* JBRefreshAutoStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF6A8212D5C6E0011D058 /* JBRefreshAutoStateFooter.swift */; };
 		9B4039FF212819310092943B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4039FE212819310092943B /* AppDelegate.swift */; };
 		9B403A01212819310092943B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B403A00212819310092943B /* ViewController.swift */; };
 		9B403A04212819310092943B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B403A02212819310092943B /* Main.storyboard */; };
@@ -53,6 +56,9 @@
 		9B3EF69B212D13660011D058 /* JBRefreshGifHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshGifHeader.swift; sourceTree = "<group>"; };
 		9B3EF69D212D3A6C0011D058 /* JBTableViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBTableViewControllerDemo.swift; sourceTree = "<group>"; };
 		9B3EF6A0212D406E0011D058 /* JBChiBaoZiHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBChiBaoZiHeader.swift; sourceTree = "<group>"; };
+		9B3EF6A2212D4B160011D058 /* JBRefreshFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshFooter.swift; sourceTree = "<group>"; };
+		9B3EF6A4212D4E1B0011D058 /* JBRefreshAutoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshAutoFooter.swift; sourceTree = "<group>"; };
+		9B3EF6A8212D5C6E0011D058 /* JBRefreshAutoStateFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshAutoStateFooter.swift; sourceTree = "<group>"; };
 		9B4039FB212819310092943B /* JBRefreshExanple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBRefreshExanple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4039FE212819310092943B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B403A00212819310092943B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,22 @@
 				9B3EF6A0212D406E0011D058 /* JBChiBaoZiHeader.swift */,
 			);
 			path = DIY;
+			sourceTree = "<group>";
+		};
+		9B3EF6A6212D5BF60011D058 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				9B3EF6A7212D5C020011D058 /* Auto */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		9B3EF6A7212D5C020011D058 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				9B3EF6A8212D5C6E0011D058 /* JBRefreshAutoStateFooter.swift */,
+			);
+			path = Auto;
 			sourceTree = "<group>";
 		};
 		9B4039F2212819310092943B = {
@@ -186,6 +208,8 @@
 			children = (
 				9B403A3221281E160092943B /* JBRefreshComponent.swift */,
 				9BAEBAF5212AEAC300D7F5C9 /* JBRefreshHeader.swift */,
+				9B3EF6A2212D4B160011D058 /* JBRefreshFooter.swift */,
+				9B3EF6A4212D4E1B0011D058 /* JBRefreshAutoFooter.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -193,6 +217,7 @@
 		9BAEBAF7212BB05600D7F5C9 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				9B3EF6A6212D5BF60011D058 /* Footer */,
 				9BAEBAF8212BB06D00D7F5C9 /* Header */,
 			);
 			path = Custom;
@@ -350,8 +375,11 @@
 				9BAEBAF0212A67ED00D7F5C9 /* JBRefreshConst.swift in Sources */,
 				9B403A01212819310092943B /* ViewController.swift in Sources */,
 				9B4039FF212819310092943B /* AppDelegate.swift in Sources */,
+				9B3EF6A9212D5C6E0011D058 /* JBRefreshAutoStateFooter.swift in Sources */,
 				9B3EF6A1212D406E0011D058 /* JBChiBaoZiHeader.swift in Sources */,
+				9B3EF6A3212D4B160011D058 /* JBRefreshFooter.swift in Sources */,
 				9BAEBAFC212BB27B00D7F5C9 /* UILabelExtension.swift in Sources */,
+				9B3EF6A5212D4E1B0011D058 /* JBRefreshAutoFooter.swift in Sources */,
 				9BAEBAFE212BBE2A00D7F5C9 /* NSBundleExtension.swift in Sources */,
 				9BAEBAF4212AA78900D7F5C9 /* UIScrollViewExtension.swift in Sources */,
 				9B3EF69E212D3A6C0011D058 /* JBTableViewControllerDemo.swift in Sources */,

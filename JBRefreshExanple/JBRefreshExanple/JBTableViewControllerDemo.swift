@@ -14,6 +14,7 @@ class JBTableViewControllerDemo: UITableViewController {
     var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        unowned let `self` = self
         switch demoIndex {
         case 0:
             tableView.header = JBRefreshStateHeader.headerWithRefreshingBlock({
@@ -87,6 +88,15 @@ class JBTableViewControllerDemo: UITableViewController {
             (header as! JBRefreshNormalHeader).lastUpdatedTimeLabel.textColor = UIColor.blue
             header.beginRefreshing()
             tableView.header = header
+        case 6:
+            count = 10
+            tableView.footer = JBRefreshAutoStateFooter.footerWithRefreshingBlock({
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                    self.count += 2
+                    self.tableView.reloadData()
+                    self.tableView.footer?.endRefreshing()
+                })
+            })
         default:
             break
         }

@@ -32,5 +32,12 @@ struct JBRefreshHead {
     static let noneLastDateText = "JBRefreshHeaderNoneLastDateText"
 }
 
+struct JBRefreshAutoFoot {
+    static let idleText = "JBRefreshAutoFooterIdleText"
+    static let refreshingText = "JBRefreshAutoFooterRefreshingText"
+    static let noMoreDataText = "JBRefreshAutoFooterNoMoreDataText"
+}
+
+
 let JBRefreshLabelFont = UIFont.boldSystemFont(ofSize: 14)
 let JBRefreshLabelTextColor = UIColor(red: 90.0 / 255.0, green: 90.0 / 255.0, blue: 90.0 / 255.0, alpha: 1.0)

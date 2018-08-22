@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var demoArr: Array = ["正常下拉(只有刷新时间、状态)", "下拉带菊花、箭头", "隐藏时间", "GIF 刷新", "隐藏时间和状态", "下拉刷新 自定义文字"]
+    var demoArr: Array = ["默认下拉(只有刷新时间、状态)", "下拉带菊花、箭头", "隐藏时间", "GIF 刷新", "隐藏时间和状态", "下拉刷新 自定义文字", "默认上拉"]
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.header = JBRefreshNormalHeader.headerWithRefreshingBlock({

@@ -141,7 +141,7 @@ class JBRefreshComponent: UIView {
 extension JBRefreshComponent {
     //MARK: - 刷新状态控制
     /// 进入刷新状态
-    func beginRefreshing() {
+    @objc func beginRefreshing() {
         UIView.animate(withDuration: JBRefreshConst.fastAnimationDuration) {
             self.alpha = 1.0
         }

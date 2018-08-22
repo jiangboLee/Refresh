@@ -9,6 +9,7 @@
 import UIKit
 
 private var headerKey: UInt8 = 0
+private var footerKey: UInt8 = 0
 extension UIScrollView {
     var header: JBRefreshHeader? {
         set(newHeader) {
@@ -22,6 +23,20 @@ extension UIScrollView {
         }
         get {
             return objc_getAssociatedObject(self, &headerKey) as? JBRefreshHeader
+        }
+    }
+    var footer: JBRefreshFooter? {
+        set(newFooter) {
+            if footer != newFooter {
+                //删除旧的，添加新的
+                footer?.removeFromSuperview()
+                self.insertSubview(newFooter!, at: 0)
+                // 存储新的
+                objc_setAssociatedObject(self, &footerKey, newFooter, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+        }
+        get {
+            return objc_getAssociatedObject(self, &footerKey) as? JBRefreshFooter
         }
     }
 }
