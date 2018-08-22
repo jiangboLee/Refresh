@@ -14,7 +14,7 @@ class JBRefreshStateHeader: JBRefreshHeader {
     /// 利用这个block来决定显示的更新时间文字
     var lastUpdatedTimeText: ((_ lastUpdatedTime: Date?) -> String)?
     /// 显示上一次刷新时间的label
-    lazy var lastUpdatedTimeLabel: UILabel = {
+    public lazy var lastUpdatedTimeLabel: UILabel = {
         let label = UILabel.jb_lable()
         addSubview(label)
         return label

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9B16BF29212C10DB008AEA54 /* UIScrollViewRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B16BF28212C10DB008AEA54 /* UIScrollViewRefresh.swift */; };
 		9B3EF69A212CFD5F0011D058 /* JBRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF699212CFD5F0011D058 /* JBRefreshNormalHeader.swift */; };
+		9B3EF69C212D13660011D058 /* JBRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF69B212D13660011D058 /* JBRefreshGifHeader.swift */; };
+		9B3EF69E212D3A6C0011D058 /* JBTableViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF69D212D3A6C0011D058 /* JBTableViewControllerDemo.swift */; };
+		9B3EF6A1212D406E0011D058 /* JBChiBaoZiHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3EF6A0212D406E0011D058 /* JBChiBaoZiHeader.swift */; };
 		9B4039FF212819310092943B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4039FE212819310092943B /* AppDelegate.swift */; };
 		9B403A01212819310092943B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B403A00212819310092943B /* ViewController.swift */; };
 		9B403A04212819310092943B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B403A02212819310092943B /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		9B16BF28212C10DB008AEA54 /* UIScrollViewRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewRefresh.swift; sourceTree = "<group>"; };
 		9B3EF699212CFD5F0011D058 /* JBRefreshNormalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshNormalHeader.swift; sourceTree = "<group>"; };
+		9B3EF69B212D13660011D058 /* JBRefreshGifHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBRefreshGifHeader.swift; sourceTree = "<group>"; };
+		9B3EF69D212D3A6C0011D058 /* JBTableViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBTableViewControllerDemo.swift; sourceTree = "<group>"; };
+		9B3EF6A0212D406E0011D058 /* JBChiBaoZiHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JBChiBaoZiHeader.swift; sourceTree = "<group>"; };
 		9B4039FB212819310092943B /* JBRefreshExanple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JBRefreshExanple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4039FE212819310092943B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B403A00212819310092943B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B3EF69F212D40200011D058 /* DIY */ = {
+			isa = PBXGroup;
+			children = (
+				9B3EF6A0212D406E0011D058 /* JBChiBaoZiHeader.swift */,
+			);
+			path = DIY;
+			sourceTree = "<group>";
+		};
 		9B4039F2212819310092943B = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +136,8 @@
 				9B403A2C212819440092943B /* JBRefresh */,
 				9B4039FE212819310092943B /* AppDelegate.swift */,
 				9B403A00212819310092943B /* ViewController.swift */,
+				9B3EF69D212D3A6C0011D058 /* JBTableViewControllerDemo.swift */,
+				9B3EF69F212D40200011D058 /* DIY */,
 				9B403A02212819310092943B /* Main.storyboard */,
 				9B403A05212819320092943B /* Assets.xcassets */,
 				9B403A07212819320092943B /* LaunchScreen.storyboard */,
@@ -187,6 +203,7 @@
 			children = (
 				9BAEBAF9212BB09A00D7F5C9 /* JBRefreshStateHeader.swift */,
 				9B3EF699212CFD5F0011D058 /* JBRefreshNormalHeader.swift */,
+				9B3EF69B212D13660011D058 /* JBRefreshGifHeader.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -324,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3EF69C212D13660011D058 /* JBRefreshGifHeader.swift in Sources */,
 				9BAEBAF2212AA0C900D7F5C9 /* UIViewExtension.swift in Sources */,
 				9BAEBAF6212AEAC300D7F5C9 /* JBRefreshHeader.swift in Sources */,
 				9BAEBAFA212BB09A00D7F5C9 /* JBRefreshStateHeader.swift in Sources */,
@@ -332,9 +350,11 @@
 				9BAEBAF0212A67ED00D7F5C9 /* JBRefreshConst.swift in Sources */,
 				9B403A01212819310092943B /* ViewController.swift in Sources */,
 				9B4039FF212819310092943B /* AppDelegate.swift in Sources */,
+				9B3EF6A1212D406E0011D058 /* JBChiBaoZiHeader.swift in Sources */,
 				9BAEBAFC212BB27B00D7F5C9 /* UILabelExtension.swift in Sources */,
 				9BAEBAFE212BBE2A00D7F5C9 /* NSBundleExtension.swift in Sources */,
 				9BAEBAF4212AA78900D7F5C9 /* UIScrollViewExtension.swift in Sources */,
+				9B3EF69E212D3A6C0011D058 /* JBTableViewControllerDemo.swift in Sources */,
 				9B3EF69A212CFD5F0011D058 /* JBRefreshNormalHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
