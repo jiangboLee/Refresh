@@ -31,7 +31,7 @@ public class JRefreshHeader: JRefreshComponent {
         }
     }
     
-    private var insetTDelta: CGFloat?
+    var insetTDelta: CGFloat?
     
     override var state: JRefreshState {
         set(newState) {

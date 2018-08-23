@@ -18,13 +18,12 @@ public class JRefreshNormalHeader: JRefreshStateHeader {
     }
     public lazy var arrowView: UIImageView = {
         let arrowView = UIImageView(image: Bundle.arrowImage())
-        addSubview(arrowView)
         return arrowView
     }()
     public lazy var loadingView: UIActivityIndicatorView = {
-        let loadingView = UIActivityIndicatorView(activityIndicatorStyle: activityIndicatorViewStyle)
+        let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         loadingView.hidesWhenStopped = true
-        addSubview(loadingView)
+        
         return loadingView
     }()
     
@@ -80,6 +79,11 @@ public class JRefreshNormalHeader: JRefreshStateHeader {
 }
 
 extension JRefreshNormalHeader {
+    override func prepare() {
+        super.prepare()
+        addSubview(arrowView)
+        addSubview(loadingView)
+    }
     override func placeSubviews() {
         super.placeSubviews()
         

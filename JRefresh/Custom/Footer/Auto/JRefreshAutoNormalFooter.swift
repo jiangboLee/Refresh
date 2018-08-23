@@ -16,10 +16,10 @@ public class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
             setNeedsLayout()
         }
     }
-    private lazy var loadingView: UIActivityIndicatorView = {
-        let loadingView = UIActivityIndicatorView(activityIndicatorStyle: activityIndicatorViewStyle)
+    public lazy var loadingView: UIActivityIndicatorView = {
+        let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         loadingView.hidesWhenStopped = true
-        addSubview(loadingView)
+        
         return loadingView
     }()
     
@@ -45,6 +45,10 @@ public class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
 }
 
 extension JRefreshAutoNormalFooter {
+    override func prepare() {
+        super.prepare()
+        addSubview(loadingView)
+    }
     override func placeSubviews() {
         super.placeSubviews()
         // 圈圈

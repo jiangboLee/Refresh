@@ -86,7 +86,7 @@ public class JRefreshComponent: UIView {
         }
     }
     
-    private var pan: UIPanGestureRecognizer?
+    var pan: UIPanGestureRecognizer?
     
     //MARK: - 初始化
     override init(frame: CGRect) {

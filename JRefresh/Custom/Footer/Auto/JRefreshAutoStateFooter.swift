@@ -16,7 +16,6 @@ public class JRefreshAutoStateFooter: JRefreshAutoFooter {
     ///显示刷新状态的label
     public lazy var stateLabel: UILabel = {
         let label = UILabel.J_lable()
-        addSubview(label)
         return label
     }()
     ///隐藏刷新状态的文字
@@ -56,6 +55,7 @@ extension JRefreshAutoStateFooter {
 extension JRefreshAutoStateFooter {
     override func prepare() {
         super.prepare()
+        addSubview(stateLabel)
         // 初始化文字
         setTitle(Bundle.localizedString(JRefreshAutoFoot.refreshingText), .Refreshing)
         setTitle(Bundle.localizedString(JRefreshAutoFoot.noMoreDataText), .NoMoreData)

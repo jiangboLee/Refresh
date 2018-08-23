@@ -12,7 +12,6 @@ public class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
 
     lazy var gifView: UIImageView = {
         let gifView = UIImageView()
-        addSubview(gifView)
         return gifView
     }()
     
@@ -55,6 +54,7 @@ public class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
 extension JRefreshAutoGifFooter {
     override func prepare() {
         super.prepare()
+        addSubview(gifView)
         // 初始化间距
         labelLeftInset = 20
     }

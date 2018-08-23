@@ -12,7 +12,6 @@ public class JRefreshGifHeader: JRefreshStateHeader {
 
     public lazy var gifView: UIImageView = {
         let gifView = UIImageView()
-        addSubview(gifView)
         return gifView
     }()
     
@@ -90,6 +89,8 @@ extension JRefreshGifHeader {
 extension JRefreshGifHeader {
     override func prepare() {
         super.prepare()
+        
+        addSubview(gifView)
         // 初始化间距
         labelLeftInset = 20
     }

@@ -16,7 +16,7 @@ public class JRefreshStateHeader: JRefreshHeader {
     /// 显示上一次刷新时间的label
     public lazy var lastUpdatedTimeLabel: UILabel = {
         let label = UILabel.J_lable()
-        addSubview(label)
+        
         return label
     }()
     
@@ -26,7 +26,7 @@ public class JRefreshStateHeader: JRefreshHeader {
     ///显示刷新状态的label
     public lazy var stateLabel: UILabel = {
         let label = UILabel.J_lable()
-        addSubview(label)
+        
         return label
     }()
     
@@ -108,6 +108,8 @@ public class JRefreshStateHeader: JRefreshHeader {
 extension JRefreshStateHeader {
     override func prepare() {
         super.prepare()
+        addSubview(lastUpdatedTimeLabel)
+        addSubview(stateLabel)
         // 初始化间距
         labelLeftInset = JRefreshConst.labelLeftInset
         // 初始化文字
