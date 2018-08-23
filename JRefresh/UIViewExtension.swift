@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     public var x: CGFloat {
         set(newX) {
             var frame = self.frame

@@ -8,19 +8,19 @@
 
 import UIKit
 
-class JRefreshAutoStateFooter: JRefreshAutoFooter {
+public class JRefreshAutoStateFooter: JRefreshAutoFooter {
 
     //MARK: - 状态相关
     ///文字距离圈圈、箭头的距离
     public var labelLeftInset: CGFloat = JRefreshConst.labelLeftInset
     ///显示刷新状态的label
-    lazy var stateLabel: UILabel = {
+    public lazy var stateLabel: UILabel = {
         let label = UILabel.J_lable()
         addSubview(label)
         return label
     }()
     ///隐藏刷新状态的文字
-    var refreshingTitleHidden: Bool = false
+    public var refreshingTitleHidden: Bool = false
     ///所有状态对应的文字
     lazy var stateTitles: Dictionary = [:]
     
@@ -46,7 +46,7 @@ class JRefreshAutoStateFooter: JRefreshAutoFooter {
 }
 extension JRefreshAutoStateFooter {
     /// 设置state状态下的文字
-    func setTitle(_ title: String?, _ state: JRefreshState) {
+    public func setTitle(_ title: String?, _ state: JRefreshState) {
         guard let title = title else { return }
         stateTitles[state.hashValue] = title
         stateLabel.text = stateTitles[state.hashValue] as? String

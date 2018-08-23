@@ -8,11 +8,11 @@
 
 import UIKit
 
-class JRefreshStateHeader: JRefreshHeader {
+public class JRefreshStateHeader: JRefreshHeader {
 
     //MARK: - 刷新时间相关
     /// 利用这个block来决定显示的更新时间文字
-    var lastUpdatedTimeText: ((_ lastUpdatedTime: Date?) -> String)?
+    public var lastUpdatedTimeText: ((_ lastUpdatedTime: Date?) -> String)?
     /// 显示上一次刷新时间的label
     public lazy var lastUpdatedTimeLabel: UILabel = {
         let label = UILabel.J_lable()
@@ -24,7 +24,7 @@ class JRefreshStateHeader: JRefreshHeader {
     ///文字距离圈圈、箭头的距离
     public var labelLeftInset: CGFloat = 0
     ///显示刷新状态的label
-    lazy var stateLabel: UILabel = {
+    public lazy var stateLabel: UILabel = {
         let label = UILabel.J_lable()
         addSubview(label)
         return label
@@ -98,7 +98,7 @@ class JRefreshStateHeader: JRefreshHeader {
     }  
     
     /// 设置state状态下的文字
-    func setTitle(_ title: String?, _ state: JRefreshState) {
+    public func setTitle(_ title: String?, _ state: JRefreshState) {
         guard let title = title else { return }
         stateTitles[state.hashValue] = title
         stateLabel.text = stateTitles[state.hashValue] as? String

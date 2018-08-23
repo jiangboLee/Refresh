@@ -8,9 +8,9 @@
 
 import UIKit
 
-class JRefreshGifHeader: JRefreshStateHeader {
+public class JRefreshGifHeader: JRefreshStateHeader {
 
-    lazy var gifView: UIImageView = {
+    public lazy var gifView: UIImageView = {
         let gifView = UIImageView()
         addSubview(gifView)
         return gifView

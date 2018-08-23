@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIScrollView {
+public extension UIScrollView {
 
     public var inset: UIEdgeInsets {
         get {

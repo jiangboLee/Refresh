@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UILabel {
-    class func J_lable() -> UILabel {
+public extension UILabel {
+    public class func J_lable() -> UILabel {
         let label = self.init()
         label.font = JRefreshLabelFont
         label.textColor = JRefreshLabelTextColor

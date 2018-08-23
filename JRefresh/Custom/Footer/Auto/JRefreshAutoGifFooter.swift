@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
+public class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
 
     lazy var gifView: UIImageView = {
         let gifView = UIImageView()

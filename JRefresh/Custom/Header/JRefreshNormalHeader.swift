@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JRefreshNormalHeader: JRefreshStateHeader {
+public class JRefreshNormalHeader: JRefreshStateHeader {
 
     public var activityIndicatorViewStyle: UIActivityIndicatorViewStyle = .gray {
         didSet {
@@ -16,12 +16,12 @@ class JRefreshNormalHeader: JRefreshStateHeader {
             setNeedsLayout()
         }
     }
-    lazy var arrowView: UIImageView = {
+    public lazy var arrowView: UIImageView = {
         let arrowView = UIImageView(image: Bundle.arrowImage())
         addSubview(arrowView)
         return arrowView
     }()
-    lazy var loadingView: UIActivityIndicatorView = {
+    public lazy var loadingView: UIActivityIndicatorView = {
         let loadingView = UIActivityIndicatorView(activityIndicatorStyle: activityIndicatorViewStyle)
         loadingView.hidesWhenStopped = true
         addSubview(loadingView)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JRefreshAutoFooter: JRefreshFooter {
+public class JRefreshAutoFooter: JRefreshFooter {
     
     ///是否自动刷新(默认为YES)
     var automaticallyRefresh: Bool = true
@@ -17,7 +17,7 @@ class JRefreshAutoFooter: JRefreshFooter {
     ///是否每一次拖拽只发一次请求
     var onlyRefreshPerDrag: Bool = false
     /// 一个新的拖拽
-    private var oneNewPan: Bool = false
+    var oneNewPan: Bool = false
     
     override var state: JRefreshState {
         set(newState) {
@@ -41,7 +41,7 @@ class JRefreshAutoFooter: JRefreshFooter {
             return super.state
         }
     }
-    override var isHidden: Bool {
+    override public var isHidden: Bool {
         set(newHidden) {
             let lastHidden = isHidden
             super.isHidden = newHidden
@@ -61,7 +61,7 @@ class JRefreshAutoFooter: JRefreshFooter {
 }
 
 extension JRefreshAutoFooter {
-    override func willMove(toSuperview newSuperview: UIView?) {
+    override public func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
             if isHidden == false {
@@ -123,7 +123,7 @@ extension JRefreshAutoFooter {
             break
         }
     }
-    override func beginRefreshing() {
+    override public func beginRefreshing() {
         if !oneNewPan && onlyRefreshPerDrag {
             return
         }

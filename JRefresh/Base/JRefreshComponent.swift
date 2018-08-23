@@ -15,7 +15,7 @@ import UIKit
 /// - Refreshing: 正在刷新中的状态
 /// - WillRefresh:  即将刷新的状态
 /// - NoMoreData: 所有数据加载完毕，没有更多的数据了
-enum JRefreshState: Int {
+public enum JRefreshState: Int {
     case Idle = 1
     case Pulling
     case Refreshing
@@ -23,8 +23,8 @@ enum JRefreshState: Int {
     case NoMoreData
 }
 
-class JRefreshComponent: UIView {
-    typealias Block = (() -> ())?
+public class JRefreshComponent: UIView {
+    public typealias Block = (() -> ())?
    
     //MARK: - 刷新回调
     /// 正在刷新的回调
@@ -97,15 +97,15 @@ class JRefreshComponent: UIView {
         prepare()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         placeSubviews()
         super.layoutSubviews()
     }
-    override func willMove(toSuperview newSuperview: UIView?) {
+    override public func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         //如果不是UIScrollView，不做任何事情
         guard let newSuperview = newSuperview,
@@ -129,7 +129,7 @@ class JRefreshComponent: UIView {
         addObservers()
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         if state == .WillRefresh {
             // 预防view还没显示出来就调用了beginRefreshing
@@ -141,7 +141,7 @@ class JRefreshComponent: UIView {
 extension JRefreshComponent {
     //MARK: - 刷新状态控制
     /// 进入刷新状态
-    @objc func beginRefreshing() {
+    @objc public func beginRefreshing() {
         UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
             self.alpha = 1.0
         }
@@ -158,16 +158,16 @@ extension JRefreshComponent {
             }
         }
     }
-    func beginRefreshingWithCompletionBlock(_ completionBlock: Block) {
+    public func beginRefreshingWithCompletionBlock(_ completionBlock: Block) {
         beginRefreshingCompletionBlock = completionBlock
         beginRefreshing()
     }
-    func endRefreshing() {
+    public func endRefreshing() {
         DispatchQueue.main.async { [weak self] in
             self?.state = .Idle
         }
     }
-    func endRefreshingWithCompletionBlock(_ completionBlock: Block) {
+    public func endRefreshingWithCompletionBlock(_ completionBlock: Block) {
         endRefreshingCompletionBlock = completionBlock
         endRefreshing()
     }
@@ -213,7 +213,7 @@ extension JRefreshComponent {
         pan = nil
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         // 遇到这些情况就直接返回
         if !isUserInteractionEnabled {

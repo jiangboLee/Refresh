@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JRefreshFooter: JRefreshComponent {
+public class JRefreshFooter: JRefreshComponent {
     ///忽略多少scrollView的contentInset的bottom
     public var ignoredScrollViewContentInsetBottom: CGFloat = 0
     //MARK: - 创建footer方法

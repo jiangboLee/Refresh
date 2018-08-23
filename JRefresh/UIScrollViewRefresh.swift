@@ -10,8 +10,8 @@ import UIKit
 
 private var headerKey: UInt8 = 0
 private var footerKey: UInt8 = 0
-extension UIScrollView {
-    var header: JRefreshHeader? {
+public extension UIScrollView {
+    public var header: JRefreshHeader? {
         set(newHeader) {
             if header != newHeader {
                 //删除旧的，添加新的
@@ -25,7 +25,7 @@ extension UIScrollView {
             return objc_getAssociatedObject(self, &headerKey) as? JRefreshHeader
         }
     }
-    var footer: JRefreshFooter? {
+    public var footer: JRefreshFooter? {
         set(newFooter) {
             if footer != newFooter {
                 //删除旧的，添加新的
@@ -53,9 +53,6 @@ extension NSObject {
 
 extension UITableView {
     
-//    static func initialize() {
-//
-//    }
     
 }
 

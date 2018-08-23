@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JRefreshHeader: JRefreshComponent {
+public class JRefreshHeader: JRefreshComponent {
     
     //MARK: - 创建header方法
     class func headerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshHeader {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
+public class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
 
     public var activityIndicatorViewStyle: UIActivityIndicatorViewStyle = .gray {
         didSet {
