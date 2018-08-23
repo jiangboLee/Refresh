@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B27AF8D212EBD6400C1F04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AF8C212EBD6400C1F04D /* AppDelegate.swift */; };
+		9B27AF94212EBD6600C1F04D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B27AF93212EBD6600C1F04D /* Assets.xcassets */; };
+		9B27AF97212EBD6600C1F04D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B27AF95212EBD6600C1F04D /* LaunchScreen.storyboard */; };
+		9B27AFB5212EBD7A00C1F04D /* JRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9B27AF9F212EBD7A00C1F04D /* JRefresh.bundle */; };
+		9B27AFB6212EBD7A00C1F04D /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA0212EBD7A00C1F04D /* UILabelExtension.swift */; };
+		9B27AFB7212EBD7A00C1F04D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA1212EBD7A00C1F04D /* UIViewExtension.swift */; };
+		9B27AFB8212EBD7A00C1F04D /* UIScrollViewRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA2212EBD7A00C1F04D /* UIScrollViewRefresh.swift */; };
+		9B27AFB9212EBD7A00C1F04D /* JRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA3212EBD7A00C1F04D /* JRefreshConst.swift */; };
+		9B27AFBA212EBD7A00C1F04D /* NSBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA4212EBD7A00C1F04D /* NSBundleExtension.swift */; };
+		9B27AFBB212EBD7A00C1F04D /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA5212EBD7A00C1F04D /* UIScrollViewExtension.swift */; };
+		9B27AFBC212EBD7A00C1F04D /* JRefreshAutoNormalFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFA9212EBD7A00C1F04D /* JRefreshAutoNormalFooter.swift */; };
+		9B27AFBD212EBD7A00C1F04D /* JRefreshAutoStateFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFAA212EBD7A00C1F04D /* JRefreshAutoStateFooter.swift */; };
+		9B27AFBE212EBD7A00C1F04D /* JRefreshAutoGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFAB212EBD7A00C1F04D /* JRefreshAutoGifFooter.swift */; };
+		9B27AFBF212EBD7A00C1F04D /* JRefreshNormalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFAD212EBD7A00C1F04D /* JRefreshNormalHeader.swift */; };
+		9B27AFC0212EBD7A00C1F04D /* JRefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFAE212EBD7A00C1F04D /* JRefreshStateHeader.swift */; };
+		9B27AFC1212EBD7A00C1F04D /* JRefreshGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFAF212EBD7A00C1F04D /* JRefreshGifHeader.swift */; };
+		9B27AFC2212EBD7A00C1F04D /* JRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFB1212EBD7A00C1F04D /* JRefreshHeader.swift */; };
+		9B27AFC3212EBD7A00C1F04D /* JRefreshAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFB2212EBD7A00C1F04D /* JRefreshAutoFooter.swift */; };
+		9B27AFC4212EBD7A00C1F04D /* JRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFB3212EBD7A00C1F04D /* JRefreshComponent.swift */; };
+		9B27AFC5212EBD7A00C1F04D /* JRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFB4212EBD7A00C1F04D /* JRefreshFooter.swift */; };
+		9B27AFCB212EBDA300C1F04D /* JChiBaoZiFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFC7212EBDA300C1F04D /* JChiBaoZiFooter.swift */; };
+		9B27AFCC212EBDA300C1F04D /* JDIYAutoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFC8212EBDA300C1F04D /* JDIYAutoFooter.swift */; };
+		9B27AFCD212EBDA300C1F04D /* JChiBaoZiHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFC9212EBDA300C1F04D /* JChiBaoZiHeader.swift */; };
+		9B27AFCE212EBDA300C1F04D /* JDIYHerader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFCA212EBDA300C1F04D /* JDIYHerader.swift */; };
+		9B27AFD0212EBDB500C1F04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B27AFCF212EBDB500C1F04D /* Main.storyboard */; };
+		9B27AFD2212EBDF400C1F04D /* JTableViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFD1212EBDF300C1F04D /* JTableViewControllerDemo.swift */; };
+		9B27AFD4212EC6D900C1F04D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27AFD3212EC6D900C1F04D /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9B27AF89212EBD6400C1F04D /* JRefreshExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRefreshExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B27AF8C212EBD6400C1F04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B27AF93212EBD6600C1F04D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B27AF96212EBD6600C1F04D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B27AF98212EBD6600C1F04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B27AF9F212EBD7A00C1F04D /* JRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = JRefresh.bundle; sourceTree = "<group>"; };
+		9B27AFA0212EBD7A00C1F04D /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		9B27AFA1212EBD7A00C1F04D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		9B27AFA2212EBD7A00C1F04D /* UIScrollViewRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewRefresh.swift; sourceTree = "<group>"; };
+		9B27AFA3212EBD7A00C1F04D /* JRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshConst.swift; sourceTree = "<group>"; };
+		9B27AFA4212EBD7A00C1F04D /* NSBundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundleExtension.swift; sourceTree = "<group>"; };
+		9B27AFA5212EBD7A00C1F04D /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		9B27AFA9212EBD7A00C1F04D /* JRefreshAutoNormalFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshAutoNormalFooter.swift; sourceTree = "<group>"; };
+		9B27AFAA212EBD7A00C1F04D /* JRefreshAutoStateFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshAutoStateFooter.swift; sourceTree = "<group>"; };
+		9B27AFAB212EBD7A00C1F04D /* JRefreshAutoGifFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshAutoGifFooter.swift; sourceTree = "<group>"; };
+		9B27AFAD212EBD7A00C1F04D /* JRefreshNormalHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshNormalHeader.swift; sourceTree = "<group>"; };
+		9B27AFAE212EBD7A00C1F04D /* JRefreshStateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshStateHeader.swift; sourceTree = "<group>"; };
+		9B27AFAF212EBD7A00C1F04D /* JRefreshGifHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshGifHeader.swift; sourceTree = "<group>"; };
+		9B27AFB1212EBD7A00C1F04D /* JRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshHeader.swift; sourceTree = "<group>"; };
+		9B27AFB2212EBD7A00C1F04D /* JRefreshAutoFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshAutoFooter.swift; sourceTree = "<group>"; };
+		9B27AFB3212EBD7A00C1F04D /* JRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshComponent.swift; sourceTree = "<group>"; };
+		9B27AFB4212EBD7A00C1F04D /* JRefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRefreshFooter.swift; sourceTree = "<group>"; };
+		9B27AFC7212EBDA300C1F04D /* JChiBaoZiFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JChiBaoZiFooter.swift; sourceTree = "<group>"; };
+		9B27AFC8212EBDA300C1F04D /* JDIYAutoFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDIYAutoFooter.swift; sourceTree = "<group>"; };
+		9B27AFC9212EBDA300C1F04D /* JChiBaoZiHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JChiBaoZiHeader.swift; sourceTree = "<group>"; };
+		9B27AFCA212EBDA300C1F04D /* JDIYHerader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDIYHerader.swift; sourceTree = "<group>"; };
+		9B27AFCF212EBDB500C1F04D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9B27AFD1212EBDF300C1F04D /* JTableViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTableViewControllerDemo.swift; sourceTree = "<group>"; };
+		9B27AFD3212EC6D900C1F04D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B27AF86212EBD6400C1F04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B27AF80212EBD6400C1F04D = {
+			isa = PBXGroup;
+			children = (
+				9B27AF9E212EBD7A00C1F04D /* JRefresh */,
+				9B27AF8B212EBD6400C1F04D /* JRefreshExample */,
+				9B27AF8A212EBD6400C1F04D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B27AF8A212EBD6400C1F04D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AF89212EBD6400C1F04D /* JRefreshExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B27AF8B212EBD6400C1F04D /* JRefreshExample */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AF8C212EBD6400C1F04D /* AppDelegate.swift */,
+				9B27AFD3212EC6D900C1F04D /* ViewController.swift */,
+				9B27AFD1212EBDF300C1F04D /* JTableViewControllerDemo.swift */,
+				9B27AFCF212EBDB500C1F04D /* Main.storyboard */,
+				9B27AFC6212EBDA300C1F04D /* DIY */,
+				9B27AF93212EBD6600C1F04D /* Assets.xcassets */,
+				9B27AF95212EBD6600C1F04D /* LaunchScreen.storyboard */,
+				9B27AF98212EBD6600C1F04D /* Info.plist */,
+			);
+			path = JRefreshExample;
+			sourceTree = "<group>";
+		};
+		9B27AF9E212EBD7A00C1F04D /* JRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AF9F212EBD7A00C1F04D /* JRefresh.bundle */,
+				9B27AFA0212EBD7A00C1F04D /* UILabelExtension.swift */,
+				9B27AFA1212EBD7A00C1F04D /* UIViewExtension.swift */,
+				9B27AFA2212EBD7A00C1F04D /* UIScrollViewRefresh.swift */,
+				9B27AFA3212EBD7A00C1F04D /* JRefreshConst.swift */,
+				9B27AFA4212EBD7A00C1F04D /* NSBundleExtension.swift */,
+				9B27AFA5212EBD7A00C1F04D /* UIScrollViewExtension.swift */,
+				9B27AFA6212EBD7A00C1F04D /* Custom */,
+				9B27AFB0212EBD7A00C1F04D /* Base */,
+			);
+			path = JRefresh;
+			sourceTree = "<group>";
+		};
+		9B27AFA6212EBD7A00C1F04D /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AFA7212EBD7A00C1F04D /* Footer */,
+				9B27AFAC212EBD7A00C1F04D /* Header */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9B27AFA7212EBD7A00C1F04D /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AFA8212EBD7A00C1F04D /* Auto */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		9B27AFA8212EBD7A00C1F04D /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AFA9212EBD7A00C1F04D /* JRefreshAutoNormalFooter.swift */,
+				9B27AFAA212EBD7A00C1F04D /* JRefreshAutoStateFooter.swift */,
+				9B27AFAB212EBD7A00C1F04D /* JRefreshAutoGifFooter.swift */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		9B27AFAC212EBD7A00C1F04D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AFAD212EBD7A00C1F04D /* JRefreshNormalHeader.swift */,
+				9B27AFAE212EBD7A00C1F04D /* JRefreshStateHeader.swift */,
+				9B27AFAF212EBD7A00C1F04D /* JRefreshGifHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		9B27AFB0212EBD7A00C1F04D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AFB1212EBD7A00C1F04D /* JRefreshHeader.swift */,
+				9B27AFB2212EBD7A00C1F04D /* JRefreshAutoFooter.swift */,
+				9B27AFB3212EBD7A00C1F04D /* JRefreshComponent.swift */,
+				9B27AFB4212EBD7A00C1F04D /* JRefreshFooter.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9B27AFC6212EBDA300C1F04D /* DIY */ = {
+			isa = PBXGroup;
+			children = (
+				9B27AFC7212EBDA300C1F04D /* JChiBaoZiFooter.swift */,
+				9B27AFC8212EBDA300C1F04D /* JDIYAutoFooter.swift */,
+				9B27AFC9212EBDA300C1F04D /* JChiBaoZiHeader.swift */,
+				9B27AFCA212EBDA300C1F04D /* JDIYHerader.swift */,
+			);
+			path = DIY;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B27AF88212EBD6400C1F04D /* JRefreshExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B27AF9B212EBD6600C1F04D /* Build configuration list for PBXNativeTarget "JRefreshExample" */;
+			buildPhases = (
+				9B27AF85212EBD6400C1F04D /* Sources */,
+				9B27AF86212EBD6400C1F04D /* Frameworks */,
+				9B27AF87212EBD6400C1F04D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JRefreshExample;
+			productName = JRefreshExample;
+			productReference = 9B27AF89212EBD6400C1F04D /* JRefreshExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B27AF81212EBD6400C1F04D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Lee;
+				TargetAttributes = {
+					9B27AF88212EBD6400C1F04D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9B27AF84212EBD6400C1F04D /* Build configuration list for PBXProject "JRefreshExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B27AF80212EBD6400C1F04D;
+			productRefGroup = 9B27AF8A212EBD6400C1F04D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B27AF88212EBD6400C1F04D /* JRefreshExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B27AF87212EBD6400C1F04D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B27AFB5212EBD7A00C1F04D /* JRefresh.bundle in Resources */,
+				9B27AF97212EBD6600C1F04D /* LaunchScreen.storyboard in Resources */,
+				9B27AF94212EBD6600C1F04D /* Assets.xcassets in Resources */,
+				9B27AFD0212EBDB500C1F04D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B27AF85212EBD6400C1F04D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B27AFCD212EBDA300C1F04D /* JChiBaoZiHeader.swift in Sources */,
+				9B27AFBF212EBD7A00C1F04D /* JRefreshNormalHeader.swift in Sources */,
+				9B27AFBE212EBD7A00C1F04D /* JRefreshAutoGifFooter.swift in Sources */,
+				9B27AFCB212EBDA300C1F04D /* JChiBaoZiFooter.swift in Sources */,
+				9B27AFC5212EBD7A00C1F04D /* JRefreshFooter.swift in Sources */,
+				9B27AFC4212EBD7A00C1F04D /* JRefreshComponent.swift in Sources */,
+				9B27AFB6212EBD7A00C1F04D /* UILabelExtension.swift in Sources */,
+				9B27AFD4212EC6D900C1F04D /* ViewController.swift in Sources */,
+				9B27AFC3212EBD7A00C1F04D /* JRefreshAutoFooter.swift in Sources */,
+				9B27AFCE212EBDA300C1F04D /* JDIYHerader.swift in Sources */,
+				9B27AFC0212EBD7A00C1F04D /* JRefreshStateHeader.swift in Sources */,
+				9B27AFD2212EBDF400C1F04D /* JTableViewControllerDemo.swift in Sources */,
+				9B27AFBD212EBD7A00C1F04D /* JRefreshAutoStateFooter.swift in Sources */,
+				9B27AFBC212EBD7A00C1F04D /* JRefreshAutoNormalFooter.swift in Sources */,
+				9B27AFB7212EBD7A00C1F04D /* UIViewExtension.swift in Sources */,
+				9B27AFC2212EBD7A00C1F04D /* JRefreshHeader.swift in Sources */,
+				9B27AFBB212EBD7A00C1F04D /* UIScrollViewExtension.swift in Sources */,
+				9B27AFB8212EBD7A00C1F04D /* UIScrollViewRefresh.swift in Sources */,
+				9B27AFC1212EBD7A00C1F04D /* JRefreshGifHeader.swift in Sources */,
+				9B27AFB9212EBD7A00C1F04D /* JRefreshConst.swift in Sources */,
+				9B27AFBA212EBD7A00C1F04D /* NSBundleExtension.swift in Sources */,
+				9B27AF8D212EBD6400C1F04D /* AppDelegate.swift in Sources */,
+				9B27AFCC212EBDA300C1F04D /* JDIYAutoFooter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9B27AF95212EBD6600C1F04D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B27AF96212EBD6600C1F04D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B27AF99212EBD6600C1F04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B27AF9A212EBD6600C1F04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B27AF9C212EBD6600C1F04D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47W28PSMV7;
+				INFOPLIST_FILE = JRefreshExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljb.JRefreshExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B27AF9D212EBD6600C1F04D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47W28PSMV7;
+				INFOPLIST_FILE = JRefreshExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljb.JRefreshExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B27AF84212EBD6400C1F04D /* Build configuration list for PBXProject "JRefreshExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B27AF99212EBD6600C1F04D /* Debug */,
+				9B27AF9A212EBD6600C1F04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B27AF9B212EBD6600C1F04D /* Build configuration list for PBXNativeTarget "JRefreshExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B27AF9C212EBD6600C1F04D /* Debug */,
+				9B27AF9D212EBD6600C1F04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B27AF81212EBD6400C1F04D /* Project object */;
+}

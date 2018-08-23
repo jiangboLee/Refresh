@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "JBRefresh"
+  s.name         = "JRefresh"
   s.version      = "1.0.0"
-  s.summary      = "JBRefresh is MJRefresh-swift"
+  s.summary      = "JRefresh is MJRefresh-swift"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  JBRefresh is MJRefresh-swift,hehe~
+  JRefresh is MJRefresh-swift,hehe~
                    DESC
 
   s.homepage     = "https://github.com/jiangboLee"
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "JBRefresh/*.{h,swift}"
+  s.source_files  = "JRefresh/*.{h,swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
