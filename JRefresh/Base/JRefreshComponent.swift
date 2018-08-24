@@ -23,7 +23,7 @@ public enum JRefreshState: Int {
     case NoMoreData
 }
 
-public class JRefreshComponent: UIView {
+open class JRefreshComponent: UIView {
     public typealias Block = (() -> ())?
    
     //MARK: - 刷新回调
@@ -61,7 +61,7 @@ public class JRefreshComponent: UIView {
     
     //MARK: - 其他
     ///拉拽的百分比(交给子类重写)
-    var pullingPercent: CGFloat? {
+    public var pullingPercent: CGFloat? {
         didSet {
             if self.refreshing {
                 return
@@ -72,7 +72,7 @@ public class JRefreshComponent: UIView {
         }
     }
     ///根据拖拽比例自动切换透明度
-    var automaticallyChangeAlpha: Bool? {
+    public var automaticallyChangeAlpha: Bool? {
         willSet(_automaticallyChangeAlpha) {
             self.automaticallyChangeAlpha = _automaticallyChangeAlpha
             if self.refreshing {
@@ -101,11 +101,11 @@ public class JRefreshComponent: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         placeSubviews()
         super.layoutSubviews()
     }
-    override public func willMove(toSuperview newSuperview: UIView?) {
+    override open func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         //如果不是UIScrollView，不做任何事情
         guard let newSuperview = newSuperview,
@@ -129,7 +129,7 @@ public class JRefreshComponent: UIView {
         addObservers()
     }
     
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         if state == .WillRefresh {
             // 预防view还没显示出来就调用了beginRefreshing
@@ -175,25 +175,25 @@ extension JRefreshComponent {
 //MARK: - 交给子类们去实现
 extension JRefreshComponent {
     ///初始化
-    @objc func prepare() {
+    @objc public func prepare() {
         // 基本属性
         autoresizingMask = .flexibleWidth
         backgroundColor = UIColor.clear
     }
     ///摆放子控件frame
-    @objc func placeSubviews() {
+    @objc public func placeSubviews() {
         
     }
     ///当scrollView的contentOffset发生改变的时候调用
-    @objc func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    @objc public func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         
     }
     ///当scrollView的contentSize发生改变的时候调用
-    @objc func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    @objc public func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         
     }
     ///当scrollView的拖拽状态发生改变的时候调用
-    @objc func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    @objc public func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         
     }
 }
@@ -213,7 +213,7 @@ extension JRefreshComponent {
         pan = nil
     }
     
-    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
         // 遇到这些情况就直接返回
         if !isUserInteractionEnabled {

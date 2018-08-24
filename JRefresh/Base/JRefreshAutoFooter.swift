@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshAutoFooter: JRefreshFooter {
+open class JRefreshAutoFooter: JRefreshFooter {
     
     ///是否自动刷新(默认为YES)
     public var automaticallyRefresh: Bool = true
@@ -41,7 +41,7 @@ public class JRefreshAutoFooter: JRefreshFooter {
             return super.state
         }
     }
-    override public var isHidden: Bool {
+    override open var isHidden: Bool {
         set(newHidden) {
             let lastHidden = isHidden
             super.isHidden = newHidden
@@ -61,7 +61,7 @@ public class JRefreshAutoFooter: JRefreshFooter {
 }
 
 extension JRefreshAutoFooter {
-    override public func willMove(toSuperview newSuperview: UIView?) {
+    override open func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
             if isHidden == false {
@@ -76,13 +76,13 @@ extension JRefreshAutoFooter {
         }
     }
     
-    override func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override public func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentSizeDidChange(change)
         
         // 设置位置
         y = scrollView?.contentH ?? 0
     }
-    override func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override public func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
        super.scrollViewContentOffsetDidChange(change)
         if state != .Idle || !automaticallyRefresh || y == 0 {
             return
@@ -101,7 +101,7 @@ extension JRefreshAutoFooter {
             }
         }
     }
-    override func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override public func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewPanStateDidChange(change)
 
         guard let scrollView = scrollView, state == .Idle else {return}

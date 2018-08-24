@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshGifHeader: JRefreshStateHeader {
+open class JRefreshGifHeader: JRefreshStateHeader {
 
     lazy var gifView: UIImageView = {
         let gifView = UIImageView()
@@ -18,7 +18,7 @@ public class JRefreshGifHeader: JRefreshStateHeader {
     lazy var stateImages: Dictionary = [:]
     lazy var stateDurations: Dictionary = [:]
     
-    override var pullingPercent: CGFloat? {
+    override public var pullingPercent: CGFloat? {
         set(newPullingPercent) {
             super.pullingPercent = newPullingPercent
             let image = stateImages[JRefreshState.Idle.hashValue] as? Array<UIImage>
@@ -71,7 +71,7 @@ public class JRefreshGifHeader: JRefreshStateHeader {
 
 //MARK: - 公共方法
 extension JRefreshGifHeader {
-    func setImages(_ images: Array<UIImage>, _ duration: TimeInterval, _ state: JRefreshState) {
+    public func setImages(_ images: Array<UIImage>, _ duration: TimeInterval, _ state: JRefreshState) {
         stateImages[state.hashValue] = images
         stateDurations[state.hashValue] = duration
         // 根据图片设置控件的高度
@@ -80,21 +80,21 @@ extension JRefreshGifHeader {
             height = image?.size.height ?? 0
         }
     }
-    func setImages(_ images: Array<UIImage>, _ state: JRefreshState) {
+    public func setImages(_ images: Array<UIImage>, _ state: JRefreshState) {
         setImages(images, Double(images.count) * 0.1, state)
     }
 }
 
 //MARK: - 实现父类的方法
 extension JRefreshGifHeader {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         
         addSubview(gifView)
         // 初始化间距
         labelLeftInset = 20
     }
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         
         if gifView.constraints.count > 0 {return}

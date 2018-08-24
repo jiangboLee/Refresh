@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshHeader: JRefreshComponent {
+open class JRefreshHeader: JRefreshComponent {
     
     //MARK: - 创建header方法
     public class func headerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshHeader {
@@ -85,20 +85,20 @@ public class JRefreshHeader: JRefreshComponent {
 
 //MARK: - 覆盖父类的方法
 extension JRefreshHeader {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         // 设置key
         lastUpdatedTimeKey = JRefreshHead.lastUpdateTimeKey
         // 设置高度
         height = JRefreshConst.headerHeight
     }
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         // 设置y值(当自己的高度发生改变了，肯定要重新调整Y值，所以放到placeSubviews方法中设置y值)
         y = -height - ignoredScrollViewContentInsetTop
     }
     
-    override func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override public func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentOffsetDidChange(change)
         guard let scrollView = scrollView, var scrollViewOriginalInset = scrollViewOriginalInset else {return}
         // 在刷新的refreshing状态

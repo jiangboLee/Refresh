@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
+open class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
 
     lazy var gifView: UIImageView = {
         let gifView = UIImageView()
@@ -52,13 +52,13 @@ public class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
 }
 
 extension JRefreshAutoGifFooter {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         addSubview(gifView)
         // 初始化间距
         labelLeftInset = 20
     }
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         
         if gifView.constraints.count > 0 {return}
@@ -74,7 +74,7 @@ extension JRefreshAutoGifFooter {
 
 //MARK: - 公共方法
 extension JRefreshAutoGifFooter {
-    func setImages(_ images: Array<UIImage>, _ duration: TimeInterval, _ state: JRefreshState) {
+    public func setImages(_ images: Array<UIImage>, _ duration: TimeInterval, _ state: JRefreshState) {
         stateImages[state.hashValue] = images
         stateDurations[state.hashValue] = duration
         // 根据图片设置控件的高度
@@ -83,7 +83,7 @@ extension JRefreshAutoGifFooter {
             height = image?.size.height ?? 0
         }
     }
-    func setImages(_ images: Array<UIImage>, _ state: JRefreshState) {
+    public func setImages(_ images: Array<UIImage>, _ state: JRefreshState) {
         setImages(images, Double(images.count) * 0.1, state)
     }
 }

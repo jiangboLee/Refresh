@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshFooter: JRefreshComponent {
+open class JRefreshFooter: JRefreshComponent {
     ///忽略多少scrollView的contentInset的bottom
     public var ignoredScrollViewContentInsetBottom: CGFloat = 0
     //MARK: - 创建footer方法
@@ -21,7 +21,7 @@ public class JRefreshFooter: JRefreshComponent {
 }
 
 extension JRefreshFooter {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         // 设置自己的高度
         height = JRefreshConst.footerHeight

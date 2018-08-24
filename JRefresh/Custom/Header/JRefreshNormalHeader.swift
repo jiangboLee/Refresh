@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshNormalHeader: JRefreshStateHeader {
+open class JRefreshNormalHeader: JRefreshStateHeader {
 
     public var activityIndicatorViewStyle: UIActivityIndicatorViewStyle = .gray {
         didSet {
@@ -79,12 +79,12 @@ public class JRefreshNormalHeader: JRefreshStateHeader {
 }
 
 extension JRefreshNormalHeader {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         addSubview(arrowView)
         addSubview(loadingView)
     }
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         
         //箭头的中心点

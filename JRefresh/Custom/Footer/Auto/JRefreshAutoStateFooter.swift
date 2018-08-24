@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshAutoStateFooter: JRefreshAutoFooter {
+open class JRefreshAutoStateFooter: JRefreshAutoFooter {
 
     //MARK: - 状态相关
     ///文字距离圈圈、箭头的距离
@@ -53,7 +53,7 @@ extension JRefreshAutoStateFooter {
 }
 //MARK: - 重写父类的方法
 extension JRefreshAutoStateFooter {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         addSubview(stateLabel)
         // 初始化文字
@@ -66,7 +66,7 @@ extension JRefreshAutoStateFooter {
         stateLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(stateLabelClick)))
     }
     
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         
         if stateLabel.constraints.count > 0 {

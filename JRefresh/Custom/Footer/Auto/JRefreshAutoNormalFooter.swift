@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
+open class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
 
     public var activityIndicatorViewStyle: UIActivityIndicatorViewStyle = .gray {
         didSet {
@@ -45,11 +45,11 @@ public class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
 }
 
 extension JRefreshAutoNormalFooter {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         addSubview(loadingView)
     }
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         // 圈圈
         var loadingCenterX = width * 0.5

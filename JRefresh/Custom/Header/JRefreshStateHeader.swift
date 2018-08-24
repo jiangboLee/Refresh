@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class JRefreshStateHeader: JRefreshHeader {
+open class JRefreshStateHeader: JRefreshHeader {
 
     //MARK: - 刷新时间相关
     /// 利用这个block来决定显示的更新时间文字
@@ -106,7 +106,7 @@ public class JRefreshStateHeader: JRefreshHeader {
 }
 
 extension JRefreshStateHeader {
-    override func prepare() {
+    override public func prepare() {
         super.prepare()
         addSubview(lastUpdatedTimeLabel)
         addSubview(stateLabel)
@@ -118,7 +118,7 @@ extension JRefreshStateHeader {
         setTitle(Bundle.localizedString(JRefreshHead.refreshingText), .Refreshing)
     }
     
-    override func placeSubviews() {
+    override public func placeSubviews() {
         super.placeSubviews()
         
         if stateLabel.isHidden {
