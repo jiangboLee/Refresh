@@ -45,11 +45,11 @@ open class JRefreshAutoNormalFooter: JRefreshAutoStateFooter {
 }
 
 extension JRefreshAutoNormalFooter {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         addSubview(loadingView)
     }
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         // 圈圈
         var loadingCenterX = width * 0.5

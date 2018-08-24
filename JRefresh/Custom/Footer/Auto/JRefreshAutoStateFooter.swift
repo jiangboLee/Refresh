@@ -53,7 +53,7 @@ extension JRefreshAutoStateFooter {
 }
 //MARK: - 重写父类的方法
 extension JRefreshAutoStateFooter {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         addSubview(stateLabel)
         // 初始化文字
@@ -66,7 +66,7 @@ extension JRefreshAutoStateFooter {
         stateLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(stateLabelClick)))
     }
     
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         
         if stateLabel.constraints.count > 0 {

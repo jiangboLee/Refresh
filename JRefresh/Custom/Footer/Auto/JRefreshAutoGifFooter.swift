@@ -52,13 +52,13 @@ open class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
 }
 
 extension JRefreshAutoGifFooter {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         addSubview(gifView)
         // 初始化间距
         labelLeftInset = 20
     }
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         
         if gifView.constraints.count > 0 {return}

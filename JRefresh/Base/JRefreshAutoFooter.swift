@@ -61,6 +61,10 @@ open class JRefreshAutoFooter: JRefreshFooter {
 }
 
 extension JRefreshAutoFooter {
+    override open func prepare() {
+        super.prepare()
+    }
+    
     override open func willMove(toSuperview newSuperview: UIView?) {
         super.willMove(toSuperview: newSuperview)
         if newSuperview != nil {
@@ -76,13 +80,13 @@ extension JRefreshAutoFooter {
         }
     }
     
-    override public func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override open func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentSizeDidChange(change)
         
         // 设置位置
         y = scrollView?.contentH ?? 0
     }
-    override public func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override open func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
        super.scrollViewContentOffsetDidChange(change)
         if state != .Idle || !automaticallyRefresh || y == 0 {
             return
@@ -101,7 +105,7 @@ extension JRefreshAutoFooter {
             }
         }
     }
-    override public func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override open func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewPanStateDidChange(change)
 
         guard let scrollView = scrollView, state == .Idle else {return}
@@ -123,7 +127,7 @@ extension JRefreshAutoFooter {
             break
         }
     }
-    override public func beginRefreshing() {
+    override open func beginRefreshing() {
         if !oneNewPan && onlyRefreshPerDrag {
             return
         }

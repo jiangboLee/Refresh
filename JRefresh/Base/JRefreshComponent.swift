@@ -175,25 +175,25 @@ extension JRefreshComponent {
 //MARK: - 交给子类们去实现
 extension JRefreshComponent {
     ///初始化
-    @objc public func prepare() {
+    @objc open func prepare() {
         // 基本属性
         autoresizingMask = .flexibleWidth
         backgroundColor = UIColor.clear
     }
     ///摆放子控件frame
-    @objc public func placeSubviews() {
+    @objc open func placeSubviews() {
         
     }
     ///当scrollView的contentOffset发生改变的时候调用
-    @objc public func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    @objc open func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         
     }
     ///当scrollView的contentSize发生改变的时候调用
-    @objc public func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    @objc open func scrollViewContentSizeDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         
     }
     ///当scrollView的拖拽状态发生改变的时候调用
-    @objc public func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    @objc open func scrollViewPanStateDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         
     }
 }
