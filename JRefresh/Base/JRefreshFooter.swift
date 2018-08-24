@@ -29,12 +29,12 @@ extension JRefreshFooter {
 }
 //MARK: - 公共方法
 extension JRefreshFooter {
-    func endRefreshingWithNoMoreData() {
+    public func endRefreshingWithNoMoreData() {
         DispatchQueue.main.async {[weak self] in
             self?.state = .NoMoreData
         }
     }
-    func resetNoMoreData() {
+    public func resetNoMoreData() {
         DispatchQueue.main.async {[weak self] in
             self?.state = .Idle
         }

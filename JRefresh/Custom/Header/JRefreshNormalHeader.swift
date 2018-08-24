@@ -27,7 +27,7 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
         return loadingView
     }()
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state
@@ -79,12 +79,12 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
 }
 
 extension JRefreshNormalHeader {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         addSubview(arrowView)
         addSubview(loadingView)
     }
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         
         //箭头的中心点

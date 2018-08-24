@@ -44,7 +44,7 @@ open class JRefreshComponent: UIView {
         return self.state == .Refreshing || self.state == .WillRefresh
     }
     /// 刷新状态 一般交给子类内部实现
-    var state: JRefreshState {
+    open var state: JRefreshState {
         didSet {
             // 加入主队列的目的是等setState:方法调用完毕、设置完文字后再去布局子控件
             DispatchQueue.main.async { [weak self] in
@@ -61,7 +61,7 @@ open class JRefreshComponent: UIView {
     
     //MARK: - 其他
     ///拉拽的百分比(交给子类重写)
-    public var pullingPercent: CGFloat? {
+    open var pullingPercent: CGFloat? {
         didSet {
             if self.refreshing {
                 return

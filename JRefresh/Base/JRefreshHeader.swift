@@ -33,7 +33,7 @@ open class JRefreshHeader: JRefreshComponent {
     
     var insetTDelta: CGFloat?
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state
@@ -85,20 +85,20 @@ open class JRefreshHeader: JRefreshComponent {
 
 //MARK: - 覆盖父类的方法
 extension JRefreshHeader {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         // 设置key
         lastUpdatedTimeKey = JRefreshHead.lastUpdateTimeKey
         // 设置高度
         height = JRefreshConst.headerHeight
     }
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         // 设置y值(当自己的高度发生改变了，肯定要重新调整Y值，所以放到placeSubviews方法中设置y值)
         y = -height - ignoredScrollViewContentInsetTop
     }
     
-    override public func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
+    override open func scrollViewContentOffsetDidChange(_ change: [NSKeyValueChangeKey : Any]?) {
         super.scrollViewContentOffsetDidChange(change)
         guard let scrollView = scrollView, var scrollViewOriginalInset = scrollViewOriginalInset else {return}
         // 在刷新的refreshing状态

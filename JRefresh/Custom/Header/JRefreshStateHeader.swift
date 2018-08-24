@@ -78,7 +78,7 @@ open class JRefreshStateHeader: JRefreshHeader {
         }
     }
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state
@@ -106,7 +106,7 @@ open class JRefreshStateHeader: JRefreshHeader {
 }
 
 extension JRefreshStateHeader {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         addSubview(lastUpdatedTimeLabel)
         addSubview(stateLabel)
@@ -118,7 +118,7 @@ extension JRefreshStateHeader {
         setTitle(Bundle.localizedString(JRefreshHead.refreshingText), .Refreshing)
     }
     
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         
         if stateLabel.isHidden {

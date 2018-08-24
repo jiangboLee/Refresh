@@ -23,7 +23,7 @@ open class JRefreshAutoStateFooter: JRefreshAutoFooter {
     ///所有状态对应的文字
     lazy var stateTitles: Dictionary = [:]
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state

@@ -18,7 +18,7 @@ open class JRefreshGifHeader: JRefreshStateHeader {
     lazy var stateImages: Dictionary = [:]
     lazy var stateDurations: Dictionary = [:]
     
-    override public var pullingPercent: CGFloat? {
+    override open var pullingPercent: CGFloat? {
         set(newPullingPercent) {
             super.pullingPercent = newPullingPercent
             let image = stateImages[JRefreshState.Idle.hashValue] as? Array<UIImage>
@@ -38,7 +38,7 @@ open class JRefreshGifHeader: JRefreshStateHeader {
         }
     }
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state
@@ -87,14 +87,14 @@ extension JRefreshGifHeader {
 
 //MARK: - 实现父类的方法
 extension JRefreshGifHeader {
-    override public func prepare() {
+    override open func prepare() {
         super.prepare()
         
         addSubview(gifView)
         // 初始化间距
         labelLeftInset = 20
     }
-    override public func placeSubviews() {
+    override open func placeSubviews() {
         super.placeSubviews()
         
         if gifView.constraints.count > 0 {return}

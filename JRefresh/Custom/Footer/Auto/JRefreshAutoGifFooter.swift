@@ -18,7 +18,7 @@ open class JRefreshAutoGifFooter: JRefreshAutoStateFooter {
     lazy var stateImages: Dictionary = [:]
     lazy var stateDurations: Dictionary = [:]
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state

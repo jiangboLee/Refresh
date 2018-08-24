@@ -19,7 +19,7 @@ open class JRefreshAutoFooter: JRefreshFooter {
     /// 一个新的拖拽
     var oneNewPan: Bool = false
     
-    override var state: JRefreshState {
+    override open var state: JRefreshState {
         set(newState) {
             // 状态检查
             let oldState = self.state
