@@ -89,7 +89,7 @@ open class JRefreshComponent: UIView {
     var pan: UIPanGestureRecognizer?
     
     //MARK: - 初始化
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         // 默认是普通状态
         state = .Idle
         super.init(frame: frame)
