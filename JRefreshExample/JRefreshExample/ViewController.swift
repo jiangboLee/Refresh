@@ -28,6 +28,9 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
         cell.textLabel?.text = demoArr[indexPath.row]
+        if indexPath.row > 6 {
+            cell.textLabel?.textColor = UIColor.gray
+        }
         return cell
     }
     
