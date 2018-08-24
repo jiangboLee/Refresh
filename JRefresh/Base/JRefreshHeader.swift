@@ -11,7 +11,7 @@ import UIKit
 public class JRefreshHeader: JRefreshComponent {
     
     //MARK: - 创建header方法
-    class func headerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshHeader {
+    public class func headerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshHeader {
         
         let cmp = self.init()
         cmp.refreshingBlock = refreshingBlock
@@ -25,7 +25,7 @@ public class JRefreshHeader: JRefreshComponent {
     }
     
     ///忽略多少scrollView的contentInset的top
-    var ignoredScrollViewContentInsetTop: CGFloat = 0 {
+    public var ignoredScrollViewContentInsetTop: CGFloat = 0 {
         didSet {
             self.y = -self.height - ignoredScrollViewContentInsetTop
         }

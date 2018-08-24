@@ -12,7 +12,7 @@ public class JRefreshFooter: JRefreshComponent {
     ///忽略多少scrollView的contentInset的bottom
     public var ignoredScrollViewContentInsetBottom: CGFloat = 0
     //MARK: - 创建footer方法
-    class func footerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshFooter {
+    public class func footerWithRefreshingBlock(_ refreshingBlock: Block) -> JRefreshFooter {
         
         let cmp = self.init()
         cmp.refreshingBlock = refreshingBlock

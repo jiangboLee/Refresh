@@ -11,11 +11,11 @@ import UIKit
 public class JRefreshAutoFooter: JRefreshFooter {
     
     ///是否自动刷新(默认为YES)
-    var automaticallyRefresh: Bool = true
+    public var automaticallyRefresh: Bool = true
     ///当底部控件出现多少时就自动刷新(默认为1.0，也就是底部控件完全出现时，才会自动刷新)
-    var triggerAutomaticallyRefreshPercent: CGFloat = 1.0
+    public var triggerAutomaticallyRefreshPercent: CGFloat = 1.0
     ///是否每一次拖拽只发一次请求
-    var onlyRefreshPerDrag: Bool = false
+    public var onlyRefreshPerDrag: Bool = false
     /// 一个新的拖拽
     var oneNewPan: Bool = false
     

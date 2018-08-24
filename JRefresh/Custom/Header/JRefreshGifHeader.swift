@@ -10,7 +10,7 @@ import UIKit
 
 public class JRefreshGifHeader: JRefreshStateHeader {
 
-    public lazy var gifView: UIImageView = {
+    lazy var gifView: UIImageView = {
         let gifView = UIImageView()
         return gifView
     }()

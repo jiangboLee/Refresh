@@ -40,7 +40,7 @@ public class JRefreshComponent: UIView {
     ///结束刷新的回调
     var endRefreshingCompletionBlock: Block
     ///是否正在刷新
-    var refreshing: Bool {
+    public var refreshing: Bool {
         return self.state == .Refreshing || self.state == .WillRefresh
     }
     /// 刷新状态 一般交给子类内部实现
