@@ -9,7 +9,7 @@
 支持swift3.2 以上， iOS版本8.0以上
 - 使用cocoapods
 
-```pod JRefresh```
+```pod 'JRefresh'```
 
 - 下载demo，直接将`JRefresh`文件夹拖到项目中使用
 ### 具体方法
