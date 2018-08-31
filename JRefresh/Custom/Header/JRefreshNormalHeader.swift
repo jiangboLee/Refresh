@@ -23,9 +23,39 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
     public lazy var loadingView: UIActivityIndicatorView = {
         let loadingView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         loadingView.hidesWhenStopped = true
-        
         return loadingView
     }()
+    
+    /// 箭头是否需要旋转圆弧动画
+    public var arrowViewNeedCircle: Bool = false {
+        didSet {
+            circleLayer.isHidden = !arrowViewNeedCircle
+        }
+    }
+    public lazy var circleLayer: CAShapeLayer = {
+        let circleLayer = CAShapeLayer()
+        circleLayer.fillColor = UIColor.clear.cgColor
+        circleLayer.strokeColor = UIColor.gray.cgColor
+        circleLayer.lineWidth = 1.5
+        circleLayer.lineCap = kCALineCapRound
+        circleLayer.strokeStart = 0
+        circleLayer.bounds = CGRect(origin: .zero, size: CGSize(width: 36, height: 36))
+        circleLayer.path = UIBezierPath(arcCenter: CGPoint(x: 18, y: 18), radius: 18, startAngle: CGFloat(-Double.pi / 2.0), endAngle: CGFloat(Double.pi * 3.0 / 2.0), clockwise: true).cgPath
+        circleLayer.isHidden = true
+        return circleLayer
+    }()
+    
+    override open var pullingPercent: CGFloat? {
+        set(newPullingPercent) {
+            super.pullingPercent = newPullingPercent
+            if arrowViewNeedCircle {
+                circleLayer.strokeEnd = newPullingPercent ?? 1
+            }
+        }
+        get {
+            return super.pullingPercent
+        }
+    }
     
     override open var state: JRefreshState {
         set(newState) {
@@ -50,21 +80,31 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
                         self.loadingView.alpha = 1.0
                         self.loadingView.stopAnimating()
                         self.arrowView.isHidden = false
+                        if self.arrowViewNeedCircle {self.circleLayer.isHidden = false}
                     }
                 } else {
                     loadingView.stopAnimating()
                     arrowView.isHidden = false
-                    UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
-                        self.arrowView.transform = .identity
+                    if arrowViewNeedCircle {
+                        circleLayer.isHidden = false
+                    } else {
+                        UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
+                            self.arrowView.transform = .identity
+                        }
                     }
                 }
             case .Pulling:
                 loadingView.stopAnimating()
                 arrowView.isHidden = false
-                UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
-                    self.arrowView.transform = CGAffineTransform(rotationAngle: CGFloat(0.000001 - Double.pi))
+                if arrowViewNeedCircle {
+                    circleLayer.isHidden = false
+                } else {
+                    UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
+                        self.arrowView.transform = CGAffineTransform(rotationAngle: CGFloat(0.000001 - Double.pi))
+                    }
                 }
             case .Refreshing:
+                if arrowViewNeedCircle {circleLayer.isHidden = true}
                 loadingView.alpha = 1.0 // 防止refreshing -> idle的动画完毕动作没有被执行
                 loadingView.startAnimating()
                 arrowView.isHidden = true
@@ -83,6 +123,7 @@ extension JRefreshNormalHeader {
         super.prepare()
         addSubview(arrowView)
         addSubview(loadingView)
+        layer.addSublayer(circleLayer)
     }
     override open func placeSubviews() {
         super.placeSubviews()
@@ -105,6 +146,7 @@ extension JRefreshNormalHeader {
         if arrowView.constraints.count == 0 {
             arrowView.size = arrowView.image?.size ?? .zero
             arrowView.center = arrowCenter
+            circleLayer.position = arrowCenter
         }
         
         // 圈圈
