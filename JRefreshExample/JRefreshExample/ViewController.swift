@@ -19,6 +19,7 @@ class ViewController: UITableViewController {
                 self.tableView.header?.endRefreshing()
             })
         })
+        (tableView.header as? JRefreshNormalHeader)?.arrowViewNeedCircle = true
         tableView.header?.beginRefreshing()
     }
     
