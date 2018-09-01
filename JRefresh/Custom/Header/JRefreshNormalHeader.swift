@@ -18,6 +18,7 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
     }
     public lazy var arrowView: UIImageView = {
         let arrowView = UIImageView(image: Bundle.arrowImage())
+        arrowView.contentMode = .scaleAspectFill
         return arrowView
     }()
     public lazy var loadingView: UIActivityIndicatorView = {
@@ -39,6 +40,7 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
         circleLayer.lineWidth = 1.5
         circleLayer.lineCap = kCALineCapRound
         circleLayer.strokeStart = 0
+        circleLayer.speed = 2
         circleLayer.bounds = CGRect(origin: .zero, size: CGSize(width: 36, height: 36))
         circleLayer.path = UIBezierPath(arcCenter: CGPoint(x: 18, y: 18), radius: 18, startAngle: CGFloat(-Double.pi / 2.0), endAngle: CGFloat(Double.pi * 3.0 / 2.0), clockwise: true).cgPath
         circleLayer.isHidden = true
@@ -49,7 +51,10 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
         set(newPullingPercent) {
             super.pullingPercent = newPullingPercent
             if arrowViewNeedCircle {
-                circleLayer.strokeEnd = newPullingPercent ?? 1
+                UIView.animate(withDuration: 0.1) {
+                    self.circleLayer.strokeEnd = newPullingPercent ?? 1
+                    self.arrowView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi) * 2.0 * (newPullingPercent ?? 1 >= 1 ? 1.0 : newPullingPercent ?? 1) - CGFloat(Double.pi) )
+                }
             }
         }
         get {
@@ -87,7 +92,11 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
                     arrowView.isHidden = false
                     if arrowViewNeedCircle {
                         circleLayer.isHidden = false
+                        UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
+                            self.arrowView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+                        }
                     } else {
+                        
                         UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
                             self.arrowView.transform = .identity
                         }
@@ -100,7 +109,7 @@ open class JRefreshNormalHeader: JRefreshStateHeader {
                     circleLayer.isHidden = false
                 } else {
                     UIView.animate(withDuration: JRefreshConst.fastAnimationDuration) {
-                        self.arrowView.transform = CGAffineTransform(rotationAngle: CGFloat(0.000001 - Double.pi))
+                        self.arrowView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
                     }
                 }
             case .Refreshing:
@@ -144,7 +153,8 @@ extension JRefreshNormalHeader {
         
         // 箭头
         if arrowView.constraints.count == 0 {
-            arrowView.size = arrowView.image?.size ?? .zero
+//            arrowView.size = arrowView.image?.size ?? .zero
+            arrowView.bounds = CGRect(origin: .zero, size: arrowView.image?.size ?? .zero)
             arrowView.center = arrowCenter
             circleLayer.position = arrowCenter
         }
