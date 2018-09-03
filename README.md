@@ -34,6 +34,20 @@ tableView.header = JRefreshStateHeader.headerWithRefreshingBlock({[weak self] in
 tableView.header?.beginRefreshing()
 ```
 ![默认下拉(只有刷新时间、状态).gif](https://upload-images.jianshu.io/upload_images/2868618-38e5ac90e71167a1.gif?imageMogr2/auto-orient/strip)
+- 默认下拉带⭕️动画
+```
+tableView.header = JRefreshNormalHeader.headerWithRefreshingBlock({[weak self] in
+                    guard let `self` = self else {return}
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                        self.count += 2
+                        self.tableView.reloadData()
+                        self.tableView.header?.endRefreshing()
+                    })
+                })
+                (tableView.header as? JRefreshNormalHeader)?.arrowViewNeedCircle = true
+                tableView.header?.beginRefreshing()
+```
+![1.gif](https://upload-images.jianshu.io/upload_images/2868618-aa9aae69085db642.gif?imageMogr2/auto-orient/strip)
 - 下拉带菊花、箭头
 ```
 tableView.header = JRefreshNormalHeader.headerWithRefreshingBlock({[weak self] in
