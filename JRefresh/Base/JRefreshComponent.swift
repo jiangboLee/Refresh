@@ -57,7 +57,7 @@ open class JRefreshComponent: UIView {
     /// 记录scrollView刚开始的inset
     var scrollViewOriginalInset: UIEdgeInsets?
     ///父控件
-    private(set) var scrollView: UIScrollView?
+    private(set) weak var scrollView: UIScrollView?
     
     //MARK: - 其他
     ///拉拽的百分比(交给子类重写)
